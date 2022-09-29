@@ -1,0 +1,50 @@
+@use './_animations.sass'
+@use './reset.sass'
+// @use './dark.sass'
+@import 'custom'
+main
+  background-color: $grayish-blue
+  color: #252525
+  min-height: 100vh
+
+img
+  width: 100%
+  height: auto
+  object-fit: cover
+
+// .container
+//   margin-inline: auto
+//   width: min(100% - 2rem, 600px )
+.container
+  width: 100%
+  padding: 1rem
+  margin: 0 auto
+  width: 100%
+  max-width: 370px
+.column
+  display: flex
+  flex-direction: column
+.row
+  display: flex
+  justify-content: center
+  align-items: center
+  &--right
+    display: flex
+    justify-content: flex-end
+    align-items: flex-end
+.hidden
+  display: none
+table
+  width: auto
+  border-spacing: 16px
+  text-align: left
+// tr, td, th
+//   display: flex
+//   padding: 8px
+thead
+  display: table-header-group
+tbody
+  display: table-row-group
+
+td
+  display: table-cell

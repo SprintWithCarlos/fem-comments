@@ -1,0 +1,61 @@
+@import "../../../style/custom"
+.card
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  border: 1px solid $light-gray
+  border-radius: 5px
+  padding: 1rem
+  margin-bottom: 1rem
+  background-color: #fff
+  &>*
+    margin-bottom: 1rem
+    display: flex
+    flex-direction: row
+    justify-content: flex-start
+    // align-items: center
+    width: 100%
+    // outline: 10px double crimson
+    text-align: start
+  &__header
+    height: 1.75rem
+    &-isCurrentUser
+      padding: 0 1rem
+      border-radius: 5px
+      color: white
+      background-color: $primary
+      margin-inline-end: 0.5rem
+
+  &__content
+    justify-content: flex-start
+    &>*
+      margin-block-end: 1rem
+  &__footer
+    justify-content: space-between
+    &>*
+      display: flex
+      flex-direction: row
+      align-items: center
+  &__replied, &__username
+    margin-inline-end: 0.5rem
+    font-weight: 500
+  &__replied
+    color: $primary
+  &__voting
+    padding: 0.5rem
+    border-radius: 5px
+    background-color: $light
+    &__score
+      // font-family: "monospace"
+      font-weight: 500
+      color: $primary
+      width: 35px
+      height: 25px
+      text-align: center
+  .icon
+    svg
+      fill: #ff0000
+  .edit, .reply
+    color: $primary
+  .delete
+    color: $secondary

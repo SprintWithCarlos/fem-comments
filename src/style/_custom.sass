@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap')
+
+// Breakpoints
+$mobile: 375px
+$tablet: 768px
+$desktop: 1440px
+@mixin mobile
+  @media screen and (max-width: $mobile)
+    @content
+@mixin tablet
+  @media screen and (min-width: $mobile + 1) and (max-width: $tablet)
+    @content
+@mixin desktop
+  @media screen and (min-width: $tablet + 1)
+    @content
+@mixin flex-centered
+  display: flex
+  justify-content: center
+  align-items: center
+@mixin blurred
+  background: rgba(255, 255, 255, 0.04)
+  backdrop-filter: blur(40.7742px)
+// Colors
+$primary: hsl(238deg, 40%, 52%) // moderate blue
+$secondary: hsl(358deg, 79%, 66%) // soft red
+$light: hsl(239deg, 57%, 85%) //light grayish blue
+$light-red: hsl(357deg, 100%, 86%) //pale red
+$dark-blue: hsl(212deg, 24%, 26%)
+$grayish-blue: hsl(211deg, 10%, 45%)
+$light-gray: hsl(223deg, 19%, 93%)
+$very-light-gray: hsl(228deg, 33%, 97%)
+$white: hsl(0deg, 0%, 100%)
+// fonts
+$barlow: 'Barlow Condensed', sans-serif
+$barlowR: 'Barlow', sans-serif
+$belle: 'Bellefair', serif
+$primary-font: 'Rubik', sans-serif
+$primary-font-color: #252525
+// Styles
+@mixin heading1
+
+  font-size: 2rem
+  // height: 100px
+  // text-transform: uppercase
+  display: flex
+  align-items: center
+  margin: 16px 0
+  @include tablet
+    font-size: 150px
+  @include desktop
+    font-size: 150px
+.subheading1
+  font-family: $belle
+  font-size: 28px
+  text-transform: uppercase
+@mixin heading2
+
+  font-size: 2rem
+  color: $primary-font
+  // text-transform: uppercase
+.subheading2
+  font-family: $barlow
+  font-size: 14px
+  letter-spacing: 2.35px
+  text-transform: uppercase
+@mixin heading3
+  font-family: $belle
+  font-size: 56px
+  text-transform: uppercase
+@mixin heading4
+  font-family: $belle
+  font-size: 32px
+  text-transform: uppercase
+@mixin heading5
+  font-family: $barlow
+  font-size: 28px
+  letter-spacing: 4.75px
+  text-transform: uppercase
+@mixin nav__text
+  font-family: $barlow
+  font-size: 16px
+  letter-spacing: 2.7px
+  text-transform: uppercase
+body
+  font-family: $primary-font
+  font-size: 15px
+  line-height: 25px
+  text-align: center
+
+h1
+  @include heading1
+h2
+  @include heading2
+h3
+  @include heading3
+h4
+  @include heading4
+h5
+  @include heading5
